@@ -27,9 +27,10 @@ header {
   grid-template-columns: auto;
   height: 90vh;
   background-color: cyan;
-  background-image: url("Assets/Feather-design.jpeg");
+  background-image: url("Assets/Header-design.png");
   background-repeat: no-repeat;
   background-size: cover;
+  filter: blur(4px);
 }
 
 main {
