@@ -26,11 +26,34 @@ header {
   grid-area: header;
   grid-template-columns: auto;
   height: 90vh;
-  background-color: cyan;
-  background-image: url("Assets/Header-design.png");
+  background-color: #143D6A;
+  background-image: url("Assets/Header-pic.png");
   background-repeat: no-repeat;
   background-size: cover;
-  filter: blur(4px);
+}
+
+header section {
+  color: white;
+  text-align: left;
+  text-shadow: 2.5px 2.5px 1px #143D6A; 
+  margin-left: 1.8em;
+}
+
+h1 {
+  font-size: 5em;
+  margin-top: 2.1em;
+  font-weight: 900;
+  letter-spacing: 5px;
+}
+
+h2 {
+  font-weight: 900;
+  font-size: 2em;
+  text-shadow: 2.5px 2.5px 1px #143D6A;
+}
+
+header p {
+  font-size: 2.5em;
 }
 
 main {
@@ -38,6 +61,14 @@ main {
   grid-template-columns: 2fr;
   background-color: #366D54;
   color: white;
+  margin-left: 1.6em;
+}
+
+main p {
+  margin: 1.5em;
+  margin-right: 3em;
+  font-size: larger;
+  text-shadow: 1.1px 1px 1px #143D6A;
 }
 
 aside {
@@ -45,6 +76,20 @@ aside {
   grid-template-columns: 1fr;
   background-color: #BE6226;
   color: white;
+  text-align: right;
+  padding-right: 1.9em;
+}
+
+.images {
+  margin-right: 1.5em;
+}
+
+.images img {
+    border: 20px #BE6226;
+}
+
+aside img {
+  margin: .5em;
 }
 
 footer {
@@ -62,12 +107,18 @@ footer {
   overflow: hidden;
 }
 
+.navbar li {
+
+}
+
 .navbar a {
   color: white;
   text-decoration: none;
   padding: 15px;
   display: block;
   text-align: center;
+  padding-top: 25px;
+  padding-bottom: 23.5px;
 }
 
 .navbar a:hover {
@@ -80,9 +131,4 @@ footer {
 
 .navbar li {
   font-size: 1.5em;
-}
-
-.navbar a {
-  padding-top: 25px;
-  padding-bottom: 23.5px;
 }
