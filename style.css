@@ -14,7 +14,7 @@ body{
 nav {
   grid-area: nav;
   grid-template-columns: auto;
-  background-color: lightgreen;
+  background-color: #143D6A;
 }
 
 .nav-list{
@@ -27,24 +27,30 @@ header {
   grid-template-columns: auto;
   height: 90vh;
   background-color: cyan;
+  background-image: url("Assets/Feather-design.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 main {
   grid-area: main;
   grid-template-columns: 2fr;
-  background-color: yellow;
+  background-color: #366D54;
+  color: white;
 }
 
 aside {
   grid-area: aside;
   grid-template-columns: 1fr;
-  background-color: firebrick;
+  background-color: #BE6226;
+  color: white;
 }
 
 footer {
   grid-area: footer;
   grid-template-columns: auto;    
-  background-color: slateblue;
+  background-color: #143D6A;
+  color: white;
 }
 
 .navbar ul {
@@ -64,7 +70,11 @@ footer {
 }
 
 .navbar a:hover {
-  background-color: darkgray;
+  background-color: #345171;
+}
+
+.navbar a:active {
+  color: #5B7797;
 }
 
 .navbar li {
