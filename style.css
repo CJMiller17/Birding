@@ -1,65 +1,93 @@
-body{
+body{                              /* Made my CSS to logically follow HTML */
   display: grid;
-  grid-template-areas:
+  grid-template-areas:             /* This sets the layout for the website */
       "nav nav"
       "header header"
       "main aside"
       "footer footer";
-  grid-template-rows: auto auto 4fr 1fr;
-  background-color: #366D54;
+  grid-template-rows: auto auto 4fr 1fr; /* Sets the proportions, */ 
+  background-color: #366D54;           /* but doesn't work like I thought */
   margin: 0px;
-
 }
 
 nav {
-  grid-area: nav;
-  grid-template-columns: auto;
+  grid-area: nav;                 /* This tells the grid which area it is */
+  grid-template-columns: auto;    /* and how much space to take up */
   background-color: #143D6A;
 }
 
 .nav-list{
-  display: flex;
-  justify-content: space-around;
+  display: flex;                  /* I watched a video of how grid and */
+  justify-content: space-around;  /* flex can be used together and aren't nemesis */
+}
+
+.navbar ul {
+  list-style-type: none;
+  background-color: #143D6A;
+  padding: 0px;
+  margin: 0px; 
+}
+
+.navbar li {
+  font-size: 1.5em;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 15px;
+  display: block;
+  text-align: center;
+  padding-top: 25px;
+  padding-bottom: 23.5px;
+}
+
+.navbar a:hover {               /* Add CSS interactivity. */
+  background-color: #345171;  /* Makes things look clickable. */
+}
+
+.navbar a:active {              /* When it is clicked */
+  color: #5B7797;
 }
 
 header {
   grid-area: header;
   grid-template-columns: auto;
-  height: 90vh;
+  height: 90vh;                 /* Makes it fill the window before scrolling */
   background-color: #143D6A;
-  background-image: url("Assets/Header-pic.png");
+  background-image: url("Assets/Header-pic.png"); /* Better to have blurred photo than using layered CSS */
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-header section {
+header section {                /* Makes text pop from busy background */
   color: white;
   text-align: left;
   text-shadow: 2.5px 2.5px 1px #143D6A; 
   margin-left: 1.8em;
 }
 
+header p {
+  font-size: 2.5em;
+}
+
 h1 {
   font-size: 5em;
   margin-top: 2.1em;
   font-weight: 900;
-  letter-spacing: 5px;
+  letter-spacing: 5px;         /* This made the short word fill the space better */
 }
 
 h2 {
   font-weight: 900;
   font-size: 2em;
-  text-shadow: 2.5px 2.5px 1px #143D6A;
-}
-
-header p {
-  font-size: 2.5em;
+  text-shadow: 2.5px 2.5px 1px #143D6A;  /* Made regular text also pop */
 }
 
 main {
   grid-area: main;
-  grid-template-columns: 2fr;
-  background-color: #366D54;
+  grid-template-columns: 1fr;   /* Tells grid what fraction to take up */
+  background-color: #366D54;  /* in comparison to the aside. Unsure using right */
   color: white;
   margin-left: 1.6em;
 }
@@ -73,11 +101,15 @@ main p {
 
 aside {
   grid-area: aside;
-  grid-template-columns: 1fr;
+  grid-template-columns: 5fr;
   background-color: #BE6226;
   color: white;
   text-align: right;
   padding-right: 1.9em;
+}
+
+aside img {
+  margin: .5em;
 }
 
 .images {
@@ -85,50 +117,13 @@ aside {
 }
 
 .images img {
-    border: 20px #BE6226;
+    border: 20px #BE6226;       /* Hard coded space for photos */
 }
 
-aside img {
-  margin: .5em;
-}
-
-footer {
-  grid-area: footer;
+footer {                          /* It's floating vs fixed. */ 
+  grid-area: footer;              /* Just need to read more about it. */
   grid-template-columns: auto;    
   background-color: #143D6A;
   color: white;
-}
-
-.navbar ul {
-  list-style-type: none;
-  background-color: #143D6A;
-  padding: 0px;
-  margin: 0px;
-  overflow: hidden;
-}
-
-.navbar li {
-
-}
-
-.navbar a {
-  color: white;
-  text-decoration: none;
-  padding: 15px;
-  display: block;
-  text-align: center;
-  padding-top: 25px;
-  padding-bottom: 23.5px;
-}
-
-.navbar a:hover {
-  background-color: #345171;
-}
-
-.navbar a:active {
-  color: #5B7797;
-}
-
-.navbar li {
-  font-size: 1.5em;
+  padding: 2em;
 }
